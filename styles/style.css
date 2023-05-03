@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "Comic Sans";
-    src: url("fonts/'Comic Sans MS.ttf'");
+    font-family: "Comic Sans MS";
+    src: local("Comic Sans MS"), url("fonts/ComicSansMS.ttf");
 }
 
 body {
@@ -41,5 +41,5 @@ button {
     border-radius: 15px;
     padding: 1em;
     font-style: italic;
-    font-family: "Comic Sans";
+    font-family: "Comic Sans MS";
 }
