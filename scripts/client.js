@@ -114,13 +114,13 @@ The totalBonus should be the employee's total bonus rounded to the nearest dolla
 */
 
 console.log("Testing that the function actually works correctly.");
-for ( employee of employees ) { // TODO: Can add `let` here
+for ( let employee of employees ) {
   console.log(calculateIndividualEmployeeBonus(employee));
 }
 
 
 function drawRaiseList (raiseArray) {
-  let list = $( "#payed"); // TODO: remove extraneous space
+  let list = $("#payed");
   list.empty();
 
   for ( let raise of raiseArray ) {
@@ -130,8 +130,7 @@ function drawRaiseList (raiseArray) {
 
 
 function buttonClick () {
-  // TODO : Add function to create list of raises.
-  raises = raisinLoop(employees); // TODO: Add const here
+  const raises = raisinLoop(employees);
   
   drawRaiseList(raises);
 }
@@ -148,15 +147,6 @@ function raisinLoop (employeesToBePayedVeryMuch) {
 
 
 function buttonFlash () {
-  button = $('button'); // TODO: missing `const`
-
-  // TODO: instead of a global variable, check out
-  // the `.toggleClass()` function in jQuery.
-  if ( isWhite ) {
-    button.css("color", "yellow");
-    isWhite = false;
-  } else {
-    button.css("color", 'white');
-    isWhite = true;
-  }
+  const button = $('button'); 
+  button.toggleClass("whiteButton yellowButton");
 }
